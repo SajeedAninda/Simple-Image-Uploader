@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from "../assets/logo.svg";
+import logo2 from "../assets/logo2.svg";
 import moonLogo from "../assets/Moon_fill.svg";
 import sunLogo from "../assets/Sun_fill.svg";
 
@@ -30,7 +31,12 @@ const Navbar = () => {
     return (
         <div className='bg-[#F9FAFBCC] dark:bg-[#121826] h-[13vh] flex items-center border-b border-[#E5E7EB] dark:border-gray-700'>
             <div className='w-[90%] mx-auto flex justify-between items-center'>
-                <img className='w-[180px]' src={logo} alt="Logo" />
+                {
+                    darkMode?
+                    <img className='w-[180px]' src={logo2} alt="Logo" />
+                    :
+                    <img className='w-[180px]' src={logo} alt="Logo" />
+                }
 
                 <div
                     onClick={toggleDarkMode}
